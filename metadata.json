@@ -1,0 +1,6 @@
+{
+  "name": "The lord JESUS CV creator",
+  "description": "Application moderne de création et personnalisation de CV haute qualité avec modèles professionnels, conseils de rédaction experts et exportation PDF instantanée.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

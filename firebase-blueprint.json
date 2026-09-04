@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Curriculum Firestore Schema",
+  "description": "Schéma Firestore pour la persistance des CVs et configurations utilisateurs",
+  "entities": {
+    "cvs": {
+      "title": "Curriculum Vitae",
+      "description": "Document complet représentant un CV avec son contenu, son design et son propriétaire",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identifiant unique du CV"
+        },
+        "userId": {
+          "type": "string",
+          "description": "Identifiant UID Firebase de l'utilisateur propriétaire"
+        },
+        "title": {
+          "type": "string",
+          "description": "Nom ou intitulé donné au CV"
+        },
+        "cvData": {
+          "type": "object",
+          "description": "Données détaillées du CV (informations personnelles, expériences, formations, compétences...)"
+        },
+        "designConfig": {
+          "type": "object",
+          "description": "Configuration du template, couleurs, polices et disposition"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date ISO de création"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date ISO de dernière modification"
+        }
+      },
+      "required": ["id", "userId", "title", "cvData", "designConfig", "updatedAt"]
+    }
+  }
+}
